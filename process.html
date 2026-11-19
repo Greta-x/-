@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>簪花之美 - 非遗传承</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 引入 html2canvas 用于保存图片 -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <!-- 引入 interact.js 用于拖拽、缩放、旋转 -->
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.17/dist/interact.min.js"></script>
 </head>
 <body class="page-process">
     <!-- ================= 顶部导航栏 ================= -->
@@ -40,7 +44,7 @@
     <!-- 页面主容器 -->
     <div class="craft-container">
         <header class="craft-header">
-            <h1>一簪一花，皆有章法</h1>
+            <h1>制作步骤</h1>
             <p>簪花虽看似繁复随性，实则讲究发髻稳固、花材层次、色彩呼应与戴戴礼仪。传统手艺在指尖流转，让鲜花从自然之物变成可佩戴的民俗记忆。</p>
         </header>
 
@@ -119,7 +123,65 @@
             </div>
         </div>
     </div>
-    <!-- .craft-container 到此闭合 -->
+
+    <!-- ================= DIY 交互区域 ================= -->
+    <section class="diy-section">
+        <h2>DIY蟳埔簪花</h2>
+        <p class="tip-text">
+          点击素材添加；拖拽移动；滚轮缩放；右键旋转；双击删除。
+        </p>
+
+        <div class="diy-wrap">
+            <!-- 素材面板 -->
+            <div class="material-list">
+                <h4>素材库</h4>
+                <div class="material-items">
+                    <div class="material-item" data-src="images/静态网页添加交互 (1).png">
+                        <img src="images/静态网页添加交互 (1).png" alt="红花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (2).png">
+                        <img src="images/静态网页添加交互 (2).png" alt="粉花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (3).png">
+                        <img src="images/静态网页添加交互 (3).png" alt="绿叶" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (4).png">
+                        <img src="images/静态网页添加交互 (4).png" alt="珍珠" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (5).png">
+                        <img src="images/静态网页添加交互 (5).png" alt="流苏" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (6).png">
+                        <img src="images/静态网页添加交互 (6).png" alt="橙花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (7).png">
+                        <img src="images/静态网页添加交互 (7).png" alt="紫花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (8).png">
+                        <img src="images/静态网页添加交互 (8).png" alt="黄色小雏菊" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (9).png">
+                        <img src="images/静态网页添加交互 (9).png" alt="粉色小雏菊" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (10).png">
+                        <img src="images/静态网页添加交互 (10).png" alt="蓝色花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (11).png">
+                        <img src="images/静态网页添加交互 (11).png" alt="白色花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (12).png">
+                        <img src="images/静态网页添加交互 (12).png" alt="细叶" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (13).png">
+                        <img src="images/静态网页添加交互 (13).png" alt="金色铃铛" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (14).png">
+                        <img src="images/静态网页添加交互 (14).png" alt="红色花串" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (15).png">
+                        <img src="images/静态网页添加交互 (15).png" alt="玫红花" /></div>
+                    <div class="material-item" data-src="images/静态网页添加交互 (16).png">
+                        <img src="images/静态网页添加交互 (16).png" alt="金色簪杆" /></div>
+                    <div class="material-item" data-src="images/发箍.png">
+                        <img src="images/发箍.png" alt="发箍" /></div>
+                </div>
+            </div>
+
+            <!-- 预览画布 -->
+            <div class="canvas-box" id="canvasBox"></div>
+        </div>
+
+        <div class="btn-group">
+            <button id="resetBtn">重置画布</button>
+            <button id="saveBtn">保存成品图</button>
+        </div>
+    </section>
 
     <!-- ================= 底部信息栏 ================= -->
     <footer class="normal-footer">
@@ -129,5 +191,8 @@
             <p class="footer-copy">致力于国家级非物质文化遗产的保护，传承与推广，让簪花文化走向世界。</p>
         </div>
     </footer>
+
+    <!-- 引入DIY逻辑脚本 -->
+    <script src="script.js"></script>
 </body>
 </html>

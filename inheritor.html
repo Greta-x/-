@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簪花故事 - 簪花叙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-inheritor">
+    <!-- ================= 顶部导航栏 ================= -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="logo-text">
+                    <h1>簪花叙</h1>
+                    <span>一花一叙·古韵绵长</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="history.html">历史溯源</a>
+                <a href="process.html">簪花工艺</a>
+                <a href="inheritor.html" class="active">簪花故事</a>
+                <a href="gallery.html">时代回响</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= 首屏主视觉 (Hero) ================= -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>簪花故事</h1>
+                <h2>以花为生，以蚝筑宅</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 簪花故事主内容区 ================= -->
+    <div class="story-container">
+        <!-- 顶部介绍区 (左图右文) -->
+        <div class="story-intro">
+            <div class="intro-img">
+                <img src="images/以花为生.jpg" alt="以花为生">
+            </div>
+            <div class="intro-text">
+                <h2>“以花为生，以蚝筑宅”</h2>
+                <p>簪花围，是蟳埔女习俗的一种。这一流传于泉州市丰泽区包括蟳埔、金崎、后埔、东梅等地的传统生活方式，具有深厚的地方特色。其中，以蟳埔村为例，千年来的蟳埔村民依赖泉州湾的渔业生活，形成了“以花为生，以蚝筑宅”的独特民俗风貌。</p>
+            </div>
+        </div>
+
+        <!-- 中间居中标题（改用独立类 story-subtitle） -->
+        <h2 class="story-subtitle">簪花的含义</h2>
+
+        <!-- 含义卡片列表（仅一层 meaning-list） -->
+        <div class="meaning-list">
+            <!-- 卡片 1 -->
+            <div class="meaning-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/花1.jpg" alt="花朵">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-badge">簪花围的流行</div>
+                        <p>早在先秦时期，鲜花就被赋予了许多美好的寓意。屈原在《离骚》中写道：“扈江离与辟芷兮，纫秋兰以为佩”，以佩戴鲜花来象征自己高尚的品行。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="meaning-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/花2.jpg" alt="花朵">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-badge">美好功名和荣耀</div>
+                        <p>受科举之风的影响，簪花在唐代是功名和荣耀的象征，是唐代文人士子争相追求的目标。唐代李淖《秦中岁时记》记载了唐代为新科进士赐宴折花的事迹。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="meaning-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/花1.jpg" alt="花朵">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-badge">象征喜乐祥和</div>
+                        <p>花象征着喜气，簪花的场合一般也都充满着喜乐祥和，最典型的莫过于婚礼。《东京梦华录》里提到，婚礼中酒过三杯之后，“婿具公裳，花胜簇面”。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 卡片 4 -->
+            <div class="meaning-card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <img src="images/花2.jpg" alt="花朵">
+                    </div>
+                    <div class="card-text">
+                        <div class="card-badge">祈福</div>
+                        <p>汉代流行茱萸会，如在重阳节这天，汉代人“佩茱萸，食蓬饵，饮菊花酒”，除了登山、饮菊花酒外，还会摘下茱萸花佩戴在腰间，意在避灾驱邪，延年益寿。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <section class="quiz-section">
+        <h2>蟳埔簪花小问答</h2>
+  
+        <div class="question">
+    <h3>1.蟳埔簪花属于哪里的非遗民俗？</h3>
+    <button class="option" data-ans="wrong">A.厦门</button>
+    <button class="option" data-ans="right">B.泉州</button>
+    <button class="option" data-ans="wrong">C.漳州</button>
+    <div class="result-text"></div>
+  </div>
+  
+  <div class="question">
+    <h3>2.蟳埔传统簪花最常用的花是？</h3>
+    <button class="option" data-ans="right">A.素馨、茉莉</button>
+    <button class="option" data-ans="wrong">B.牡丹</button>
+    <button class="option" data-ans="wrong">C.郁金香</button>
+    <div class="result-text"></div>
+  </div>
+  
+  <div class="question">
+    <h3>3.蟳埔女头上盘绕的发髻被称作什么？</h3>
+    <button class="option" data-ans="wrong">A.朝天髻</button>
+    <button class="option" data-ans="right">B.田螺髻</button>
+    <button class="option" data-ans="wrong">C.双环髻</button>
+    <div class="result-text"></div>
+  </div>
+  
+  <div class="question">
+    <h3>4.蟳埔簪花围最早起源和哪类人群相关？</h3>
+    <button class="option" data-ans="wrong">A.宫廷贵族</button>
+    <button class="option" data-ans="right">B.海边渔女</button>
+    <button class="option" data-ans="wrong">C.文人仕女</button>
+    <div class="result-text"></div>
+  </div>
+  
+  <div class="question">
+    <h3>5.蟳埔簪花围的骨架一般用什么制作？</h3>
+    <button class="option" data-ans="wrong">A.铁丝</button>
+    <button class="option" data-ans="right">B.竹篾</button>
+    <button class="option" data-ans="wrong">C.塑料</button>
+    <div class="result-text"></div>
+  </div>
+  
+  <div class="question">
+    <h3>6.蟳埔女的传统服饰上半身短衫叫？</h3>
+    <button class="option" data-ans="right">A.大裾衫</button>
+    <button class="option" data-ans="wrong">B.旗袍</button>
+    <button class="option" data-ans="wrong">C.褙子</button>
+    <div class="result-text"></div>
+  </div>
+
+  <button class="reset-btn">重置题目</button>
+</section>
+
+<script src="script.js"></script>
+
+
+    <!-- ================= 底部信息栏 ================= -->
+    <footer class="normal-footer">
+        <div class="footer-inner">
+            <h2 class="footer-logo">簪花叙</h2>
+            <p class="footer-slogan">非遗传承·映照之美</p>
+            <p class="footer-copy">致力于国家级非物质文化遗产的保护，传承与推广，让簪花文化走向世界。</p>
+        </div>
+    </footer>
+</body>
+</html>
